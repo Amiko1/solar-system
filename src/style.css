@@ -106,10 +106,80 @@ body {
 @media (max-width: 800px) {
   .planets__card {
     width: 50px;
-    padding: 0.2rem;
+    padding: 0.3rem;
+    padding-bottom: 1rem;
   }
 
   .planet__name {
     font-size: 12px;
   }
+}
+
+@keyframes ldio-idrpd2os17b {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.ldio-idrpd2os17b > div > div {
+  transform-origin: 100px 100px;
+  animation: ldio-idrpd2os17b 3.0303030303030303s linear infinite;
+  opacity: 0.8;
+}
+.ldio-idrpd2os17b > div > div > div {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  width: 70px;
+  height: 70px;
+  border-radius: 70px 0 0 0;
+  transform-origin: 100px 100px;
+}
+.ldio-idrpd2os17b > div div:nth-child(1) {
+  animation-duration: 0.7575757575757576s;
+}
+.ldio-idrpd2os17b > div div:nth-child(1) > div {
+  background: #912623;
+  transform: rotate(0deg);
+}
+.ldio-idrpd2os17b > div div:nth-child(2) {
+  animation-duration: 1.0101010101010102s;
+}
+.ldio-idrpd2os17b > div div:nth-child(2) > div {
+  background: #f0f5f6;
+  transform: rotate(0deg);
+}
+.ldio-idrpd2os17b > div div:nth-child(3) {
+  animation-duration: 1.5151515151515151s;
+}
+.ldio-idrpd2os17b > div div:nth-child(3) > div {
+  background: #a2b4bc;
+  transform: rotate(0deg);
+}
+.ldio-idrpd2os17b > div div:nth-child(4) {
+  animation-duration: 3.0303030303030303s;
+}
+.ldio-idrpd2os17b > div div:nth-child(4) > div {
+  background: #7394a4;
+  transform: rotate(0deg);
+}
+.loadingio-spinner-wedges-45f1lz6g5gl {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+  background: #f1f2f3;
+}
+.ldio-idrpd2os17b {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+.ldio-idrpd2os17b div {
+  box-sizing: content-box;
 }

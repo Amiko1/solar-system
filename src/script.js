@@ -11,6 +11,8 @@ const bio = document.querySelector(".planet-bio");
 const bioName = document.querySelector(".bio__name");
 const bioDesccription = document.querySelector(".bio__description");
 const bioUnselect = document.querySelector(".bio__unselect");
+const app = document.getElementById("app");
+const loader = document.getElementById("loader");
 
 console.log(bio, bioName, bioDesccription);
 // initialize the scene
@@ -280,7 +282,6 @@ const planetMeshes = planets.map((planet) => {
 
   return planetMesh;
 });
-console.log(planetMeshes);
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
 const pointLight = new THREE.PointLight(0xffffff, 2);
 scene.add(ambientLight);
@@ -299,6 +300,17 @@ camera.updateProjectionMatrix();
 
 // initialize the renderer
 const canvas = document.querySelector("canvas.threejs");
+
+app.style.visibility = "hidden";
+loader.style.display = "block";
+canvas.style.visibility = "hidden";
+
+addEventListener("load", (event) => {
+  app.style.visibility = "visible";
+  loader.style.display = "none";
+  canvas.style.visibility = "visible";
+});
+
 const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -334,6 +346,11 @@ planet.forEach((item, index) => {
 bioUnselect.addEventListener("click", () => {
   controls.maxDistance = 200;
   controls.minDistance = 20;
+  controls.target = new THREE.Vector3(
+    controls.target.x,
+    controls.target.y,
+    controls.target.z
+  );
   bio.style.display = "none";
 });
 
