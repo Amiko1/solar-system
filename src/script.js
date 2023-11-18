@@ -12,7 +12,6 @@ const bioName = document.querySelector(".bio__name");
 const bioDesccription = document.querySelector(".bio__description");
 const bioUnselect = document.querySelector(".bio__unselect");
 const app = document.getElementById("app");
-const loader = document.getElementById("loader");
 
 console.log(bio, bioName, bioDesccription);
 // initialize the scene
@@ -302,13 +301,11 @@ camera.updateProjectionMatrix();
 const canvas = document.querySelector("canvas.threejs");
 
 app.style.visibility = "hidden";
-loader.style.display = "block";
 canvas.style.visibility = "hidden";
 
 addEventListener("load", (event) => {
-  app.style.visibility = "visible";
-  loader.style.display = "none";
   canvas.style.visibility = "visible";
+  app.style.visibility = "visible";
 });
 
 const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
